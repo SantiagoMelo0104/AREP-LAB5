@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1> Calcular  </h1>
+    <form>
+        <input type="text" id="datos" name="name" value="">
+        <input type="button" value="Enviar" onclick= "loadGetMsg(datos)">
+        <div  id="dat"></div>
+        <script>
+            function loadGetMsg(datos){
+                let url = "/cos?number=" + datos.value;
+
+                fetch(url, { method: 'GET' })
+                    .then(x => x.text())
+                    .then(y => {
+                        document.getElementById("dat").innerHTML = "";
+                        document.getElementById("dat").innerHTML = y;
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+        </script>
+    </form>
+
+
+</body>
+</html>

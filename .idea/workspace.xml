@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f80ad2f9-9579-4258-a541-1b6fdfff4b2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f80ad2f9-9579-4258-a541-1b6fdfff4b2c" name="Changes" comment="prototipo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/arep/SparkWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/arep/SparkWebServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/formulario.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/formulario.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="ProjectId" id="2d3IgrbJlJ5u6tRsZLPhYRAC5N6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -44,6 +42,11 @@
     "onboarding.tips.debug.path": "C:/Users/santiago.naranjo-m.LABINFO/IdeaProjects/AREP-LAB5/src/main/java/org/arep/Main.java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\santiago.naranjo-m.LABINFO\IdeaProjects\AREP-LAB5\src\main\resources\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,6 +56,19 @@
       <option name="presentableId" value="Default" />
       <updated>1709230475315</updated>
     </task>
+    <task id="LOCAL-00001" summary="prototipo">
+      <option name="closed" value="true" />
+      <created>1709240169670</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709240169671</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="prototipo" />
+    <option name="LAST_COMMIT_MESSAGE" value="prototipo" />
   </component>
 </project>
