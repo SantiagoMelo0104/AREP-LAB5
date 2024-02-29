@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1> Calcular  </h1>
+    <form>
+        <input type="text" id="datos" name="name" value="">
+        <input type="button" value="Enviar" onclick= "loadGetMsg()">
+        <input type="text" id="dat" value=""/>
+        <script>
+            function loadGetMsg() {
+
+                fetch("/Cos?number=", {method: 'GET'} )
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("dat").innerHTML= data;
+                })
+                .catch((error) => {
+                  console.error('Error:', error);
+                });
+
+        </script>
+    </form>
+
+
+</body>
+</html>
