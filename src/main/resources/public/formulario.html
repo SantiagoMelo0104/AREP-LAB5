@@ -1,31 +1,187 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <title>Calculadora</title>
+
+    <style>
+
+        h1{
+            text-align: center;
+        }
+
+        .card {
+            width: 30rem;
+            margin: 1rem;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 4px;
+            background-color: white;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 10vh auto 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card h1 {
+            text-align: center;
+        }
+
+        .card input, .card button {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        .card div {
+            text-align: center;
+        }
+
+        body{
+            background: rgb(36,24,0);
+            background: linear-gradient(90deg, rgba(36,24,0,1) 0%, rgba(121,86,9,1) 35%, rgba(129,73,8,1) 66%, rgba(255,181,0,1) 100%);
+        }
+
+    </style>
+
 </head>
+
 <body>
-    <h1> Calcular  </h1>
-    <form>
-        <input type="text" id="datos" name="name" value="">
-        <input type="button" value="Enviar" onclick= "loadGetMsg(datos)">
-        <div  id="dat"></div>
-        <script>
-            function loadGetMsg(datos){
-                let url = "/cos?number=" + datos.value;
 
-                fetch(url, { method: 'GET' })
-                    .then(x => x.text())
-                    .then(y => {
-                        document.getElementById("dat").innerHTML = "";
-                        document.getElementById("dat").innerHTML = y;
-                    })
-                    .catch(error => console.error('Error:', error));
-            }
+<h1>Calcular</h1>
 
-        </script>
-    </form>
+<div class="container">
 
 
-</body>
-</html>
+    <div class="card">
+
+
+        <h1> Coseno </h1>
+
+
+        <input type="text" id="datosCos" name="name" value="">
+
+
+        <input type="button" value="Enviar" onclick="calculateCos(datosCos)">
+
+
+        <div id="datCos"></div>
+
+
+    </div>
+
+
+
+    <div class="card">
+
+
+        <h1>Seno </h1>
+
+
+        <input type="text" id="datosSen" name="name" value="">
+
+
+        <input type="button" value="Enviar" onclick="calculateSen(datosSen)">
+
+
+        <div id="datSen"></div>
+
+
+    </div>
+
+
+
+    <div class="card">
+
+
+        <h1>Palíndromas</h1>
+
+
+        <input type="text" id="datosPalin" name="name" value="">
+
+
+        <input type="button" value="Enviar" onclick="calculatePalin(datosPalin)">
+
+
+        <div id="datPalin"></div>
+
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h1>Magnitud de un vector </h1>
+
+        <input type="text" id="datosMag1" name="name" value="" placeholder="Escribe el vector x">
+
+        <input type="text" id="datosMag2" name="name" value="" placeholder="Escribe el vector Y">
+
+        <input type="button" value="Enviar" onclick="calculateMag(datosMag1, datosMag2)">
+
+        <div id="datMag"></div>
+
+
+    </div>
+
+
+</div>
+
+<script>
+    function calculateCos(datosCos) {
+        let url = "/Cos?number=" + datosCos.value;
+
+        fetch(url, {method: 'GET'})
+            .then(x => x.text())
+            .then(y => {
+                document.getElementById("datCos").innerHTML = "";
+                document.getElementById("datCos").innerHTML = y;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function calculateSen(datosSen) {
+        let url = "/Sin?number=" + datosSen.value;
+
+        fetch(url, {method: 'GET'})
+            .then(x => x.text())
+            .then(y => {
+                document.getElementById("datSen").innerHTML = "";
+                document.getElementById("datSen").innerHTML = y;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function calculatePalin(datosPalin) {
+        let url = "/Palindromo?word=" + datosPalin.value;
+
+        fetch(url, {method: 'GET'})
+            .then(x => x.text())
+            .then(y => {
+                document.getElementById("datPalin").innerHTML = "";
+                document.getElementById("datPalin").innerHTML = y;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function calculateMag(datosMag1, datosMag2) {
+        let url = "/Magnitud?number1=" + datosMag1.value + "&number2=" + datosMag2.value;
+        fetch(url, {method: 'GET'})
+            .then(x => x.text())
+            .then(y => {
+                document.getElementById("datMag").innerHTML = "";
+                document.getElementById("datMag").innerHTML = y;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
