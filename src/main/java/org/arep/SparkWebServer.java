@@ -14,7 +14,6 @@ public class SparkWebServer {
         });
         get("/Cos", (req,res) -> {
             String number= req.queryParams("number");
-            System.out.println("-------------" + number);
             return "" + Math.cos(Double.parseDouble(number));
         });
         get("/Palindromo", (req,res) -> {
