@@ -1,4 +1,4 @@
-# LABORATORIO 3 AREP - MODULARIZACIÓN CON VIRTUALIZACIÓN E INTRODUCCIÓN A DOCKER
+# LABORATORIO 5 AREP - MODULARIZACIÓN CON VIRTUALIZACIÓN E INTRODUCCIÓN A DOCKER
 En este laboratorio, construimos una pequeña y eficiente aplicación web utilizando Spark Java y Docker. Comenzamos creando un proyecto Java con Maven y las dependencias 
 necesarias para Spark Java. Luego, definimos un punto final en la clase principal que devuelve una cadena cuando se accede a él. Creando un Dockerfile, construimos una 
 imagen de Docker para la aplicación, la ejecutamos y exponemos el puerto en la máquina host. Demostramos la flexibilidad y escalabilidad de Docker creando varias instancias 
